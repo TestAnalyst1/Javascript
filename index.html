@@ -16,7 +16,7 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">UFO Sightings
-            <img class="nav-ufo" src="static/images/ufo.svg">
+            <img class="nav-ufo" src="static/images/ufo.svg"><!-- displaying image -->
           </a>
         </div>
       </div>
@@ -30,20 +30,81 @@
         <div class="col-md-2">
           <aside class="filters">
             <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
+              <div class="panel-heading">Search criteria</div>
               <div class="panel-body">
                 <form>
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
                         <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        <input class="form-control" id="datetime" type="text" placeholder="1/1/2010">
                       </li>
                     </ul>
                   </div>
-                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <button id="search-btn-date" type="submit" class="btn btn-default">search by Date </button><!-- search button for date -->
                 </form>
               </div>
+              <div class="panel-heading"></div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="cityfilters">
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a City</label>
+                        <input class="form-control" id="cityname" type="text" placeholder="benton">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="search-btn-city" type="submit" class="btn btn-default">search by City </button>
+                </form>
+              </div>
+            
+              <div class="panel-heading"></div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="statefilters">
+                      <li class="filter list-group-item">
+                        <label for="state">Enter a State</label>
+                        <input class="form-control" id="statename" type="text" placeholder="ca">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="search-btn-state" type="submit" class="btn btn-default">search by State </button> <!-- search for state button -->
+                </form>
+              </div>
+
+              <div class="panel-heading"></div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="countryfilters">
+                      <li class="filter list-group-item">
+                        <label for="country">Enter a Country</label>
+                        <input class="form-control" id="countryname" type="text" placeholder="us">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="search-btn-country" type="submit" class="btn btn-default">search by Country </button><!-- button for country search -->
+                </form>
+              </div>
+
+
+              <div class="panel-heading"></div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="shapefilters">
+                      <li class="filter list-group-item">
+                        <label for="shape">Enter a Shape</label>
+                        <input class="form-control" id="shapename" type="text" placeholder="triangle">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="search-btn-shape" type="submit" class="btn btn-default">search by Shape </button><!-- button for Shape Search -->
+                </form>
+              </div>
+       
             </div>
           </aside>
         </div>
@@ -61,7 +122,7 @@
                   <th class="table-head">Comments</th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody id="target-table-display"></tbody>
             </table>
           </div>
         </div>
